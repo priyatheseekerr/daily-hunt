@@ -20,6 +20,7 @@ public class firstNArmstrong {
             }
             i++;
         }
+        sc.close();
 
     }
 }
