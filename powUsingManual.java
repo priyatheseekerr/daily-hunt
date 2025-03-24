@@ -1,3 +1,4 @@
+// program to find the power of a number without using pow() method
 import java.util.*;
 
 public class powUsingManual {
