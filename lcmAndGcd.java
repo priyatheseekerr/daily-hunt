@@ -1,3 +1,4 @@
+//program to find lcm and gcd/hcf of two numbers
 import java.util.Scanner;
 
 public class lcmAndGcd {
