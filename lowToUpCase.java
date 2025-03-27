@@ -1,3 +1,4 @@
+//JAVA program to convert a string from lowercase to uppercase
 import java.util.*;
 
 public class lowToUpCase {
