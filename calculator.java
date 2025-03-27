@@ -1,3 +1,4 @@
+//Menu driven JAVA program for calculator (how to use switch case statement)
 import java.util.Scanner;
 
 public class calculator {
