@@ -7,8 +7,6 @@ public class gcd {
         System.out.print("Enter two number to find lcm: ");
         int a = sc.nextInt();
         int b = sc.nextInt();
-        int a1 = a;
-        int b1 = b;
         while (b != 0) {
             int temp = b;
             b = a % b;
