@@ -1,21 +1,25 @@
+import java.util.Map;
 import java.util.Scanner;
 
 public class RomanToInteger {
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter the number: ");
-        int num=sc.nextInt();
-        int[] values =    {1000,900,500,400,100,90,50,40,10,9,5,4,1};
-        String[] symbols ={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
-        StringBuilder sb = new StringBuilder();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enetr the string: ");
+        String s = sc.next();
+        Map<Character, Integer> map = Map.of(
+                'I', 1, 'V', 5, 'X', 10,
+                'L', 50, 'C', 100, 'D', 500, 'M', 1000);
+        int total = 0;
 
-        for (int i = 0; i < values.length && num > 0; i++) {
-            while (num >= values[i]) {
-                sb.append(symbols[i]);
-                num -= values[i];
+        for (int i = 0; i < s.length(); i++) {
+            int val = map.get(s.charAt(i));
+            if (i + 1 < s.length() && val < map.get(s.charAt(i + 1))) {
+                total -= val;
+            } else {
+                total += val;
             }
         }
-        System.out.println(sb.toString());
+        System.out.println(total);
         sc.close();
     }
 }
